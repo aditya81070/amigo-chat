@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Amigo AI</title>
+    <link rel="stylesheet" href="{% static 'chatbox/css/main.css' %}">
+</head>
+
+
+  <body>
+
+    <header class="header">
+      <div class="header__inner">
+        <h1 class="header__title">Amigo AI</h1>
+      </div>
+    </header>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item"><a href="#">menu1</a></li>
+        <li class="nav__item"><a href="#">menu2</a></li>
+        <li class="nav__item"><a href="#">menu3</a></li>
+        <li class="nav__item" id="help"><a href="#chatbox">help</a></li>
+      </ul>
+    </nav>
+
+<main>
+  <section>
+    <section>
+      <h1>this is home page of Amigo AI</h1>
+    </section>
+    <section>
+      <ul>
+        <li>Automatation</li>
+        <li>Automatation</li>
+        <li>Automatation</li>
+      </ul>
+    </section>
+<section>
+    <div id="chatbox" class="chatbox">
+        <!-- <img src="minimize.png" alt="minimize"> -->
+      <div class="option">
+      <a href=""><img src="{% static 'chatbox/img/closeicon.png' %}" class="close" alt="close" id="close"></a>
+      </div>
+        <iframe
+      width="350px"
+      height="430px"
+      src="https://console.dialogflow.com/api-client/demo/embedded/3476022b-49c8-4b10-98fa-2fb182175850">
+   </iframe>
+    </div>
+</section>
+
+    <footer>
+      <ul>
+        <li>Product Of <a href="#">Amigo AI</a></li>
+        <li><a href="">facebook</a></li>
+        <li><a href="">github</a></li>
+      </ul>
+    </footer>
+  </section>
+
+</main>
+<script type="text/javascript">
+const chatbox=document.getElementById('chatbox');
+const close=document.getElementById('close');
+const help=document.getElementById('help')
+
+help.addEventListener('click',function() {
+  chatbox.style.display='block';
+});
+
+close.addEventListener('click',function() {
+  chatbox.style.display='none';
+});
+
+
+
+</script>
+  </body>
+</html>
