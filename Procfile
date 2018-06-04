@@ -1,1 +1,1 @@
-web: gunicorn chatbox.wsgi --log-file -
+web: gunicorn amigochat.wsgi --log-file -
